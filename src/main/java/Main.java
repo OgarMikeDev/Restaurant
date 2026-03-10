@@ -19,5 +19,17 @@ public class Main {
         );
         Employee.printAllEmployee();
         Employee.printIncomeRestaurant();
+
+        /*
+        TODO
+         Задание:
+         Создать 3 поваров.
+         Зп каждого повара зависит от стажа работа и
+         совокупности % от дохода компании и сlientSalary.
+         если повар работает до 1 года,
+         он получает свою зп(сlientSalary) + 8% от сlientSalary.
+         Если же повар работает от 1 года до 4 лет
+         он получают свою зп + 11% от сlientSalary + 4% от incomeRestaurant
+         */
     }
 }
