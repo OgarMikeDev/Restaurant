@@ -17,6 +17,7 @@ public class Administrator extends Employee {
         double salaryAdministator = employee.getСlientSalary();
         double onePercentIncomeRestaurant = Employee.getIncomeRestaurant() * 1 / 100;
         double threePercentIncomeRestaurant = Employee.getIncomeRestaurant() * 3 / 100;
+        double sevenPercentIncomeRestaurant = Employee.getIncomeRestaurant() * 7 / 100;
         double finalSalaryAdministator = 0;
         if (
                 employee.getDateStartWork().getYear() + 5 < LocalDate.now().getYear()
@@ -24,8 +25,10 @@ public class Administrator extends Employee {
             finalSalaryAdministator = salaryAdministator + threePercentIncomeRestaurant;
         } else if (employee.getDateStartWork().getYear() + 5 > LocalDate.now().getYear()) {
             finalSalaryAdministator = salaryAdministator + onePercentIncomeRestaurant;
-
+        } else if (employee.getDateStartWork().getYear() + 7 > LocalDate.now().getYear()) {
+            finalSalaryAdministator = salaryAdministator + sevenPercentIncomeRestaurant;
         }
+        //TODO Если сотрудинк работает более 7 лет, ему считают 7% от дохода компании
         employee.setСlientSalary(finalSalaryAdministator);
     }
 }
