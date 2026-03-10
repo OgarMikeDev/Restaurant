@@ -39,6 +39,10 @@ public abstract class Employee implements GenerateOfSalary {
         employeeSet.add(this); //TODO this - текущий сотрудник
     }
 
+    public LocalDate getDateStartWork() {
+        return dateStartWork;
+    }
+
     public void setСlientSalary(double сlientSalary) {
         this.сlientSalary = сlientSalary;
     }

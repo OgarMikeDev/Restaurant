@@ -14,10 +14,10 @@ public class Main {
         Employee employee2 = new Administrator(
                 "Сувлакин Сувлак Сувлакович",
                 40_000,
-                250,
+                500,
                 LocalDate.of(2025, 4,5)
         );
         Employee.printAllEmployee();
-        System.out.println(Employee.getIncomeRestaurant());
+        Employee.printIncomeRestaurant();
     }
 }

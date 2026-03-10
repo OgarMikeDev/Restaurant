@@ -15,8 +15,17 @@ public class Administrator extends Employee {
     @Override
     public void generateOfSalary(Employee employee) {
         double salaryAdministator = employee.getСlientSalary();
-        double onePercentIncomeRestaurant = Employee.getIncomeRestaurant();
-        double finalSalaryAdministator = salaryAdministator + onePercentIncomeRestaurant;
+        double onePercentIncomeRestaurant = Employee.getIncomeRestaurant() * 1 / 100;
+        double threePercentIncomeRestaurant = Employee.getIncomeRestaurant() * 3 / 100;
+        double finalSalaryAdministator = 0;
+        if (
+                employee.getDateStartWork().getYear() + 5 < LocalDate.now().getYear()
+        ) {
+            finalSalaryAdministator = salaryAdministator + threePercentIncomeRestaurant;
+        } else if (employee.getDateStartWork().getYear() + 5 > LocalDate.now().getYear()) {
+            finalSalaryAdministator = onePercentIncomeRestaurant + threePercentIncomeRestaurant;
+
+        }
         employee.setСlientSalary(finalSalaryAdministator);
     }
 }
