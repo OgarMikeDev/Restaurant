@@ -23,7 +23,7 @@ public class Administrator extends Employee {
         ) {
             finalSalaryAdministator = salaryAdministator + threePercentIncomeRestaurant;
         } else if (employee.getDateStartWork().getYear() + 5 > LocalDate.now().getYear()) {
-            finalSalaryAdministator = onePercentIncomeRestaurant + threePercentIncomeRestaurant;
+            finalSalaryAdministator = salaryAdministator + onePercentIncomeRestaurant;
 
         }
         employee.setСlientSalary(finalSalaryAdministator);
