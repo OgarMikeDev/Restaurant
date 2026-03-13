@@ -1,20 +1,21 @@
 package services;
 
 import model.Employee;
-
 /*
 TODO
-  GenerateOfSalary -
-  для обязательного формирования зп
-  каждому сотруднику
+  FormationSalary нужен тогда,
+  когда все сотрудники(официант, повар, администратор)
+  должны иметь одно и тоже действие(формирование зп),
+  но способ(реализация) этого действия у всех разный
  */
-public interface GenerateOfSalary {
+public interface FormationSalary {
     /*
     TODO
-     т.к. все сотрудники
-     имеют разные способы формирования зп,
-     generateOfSalary() не имеет {},
-     т.е. реализации
+     formationSalary() - не имеет {},
+     т.к. повар будет иметь свою реализацию,
+     официант свою и
+     администратор тоже свою
      */
-    void generateOfSalary(Employee employee);
+    void formationSalary(Employee employee);
 }
+
