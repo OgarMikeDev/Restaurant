@@ -5,31 +5,25 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Employee employee1 = new Administrator(
-                "Шаурмякин Шаурмен Лавашович",
-                80_000,
-                500,
-                LocalDate.of(2020, 1,2)
-        );
-        Employee employee2 = new Administrator(
-                "Сувлакин Сувлак Сувлакович",
+        Employee employee1 = new Waiter(
+                "Шаурмян Шаурмен Лавашович",
                 40_000,
-                500,
-                LocalDate.of(2025, 4,5)
-        );
-        Employee.printAllEmployee();
-        Employee.printIncomeRestaurant();
-
+                LocalDate.of(2024, 1, 1));
+        Employee employee2 = new Waiter(
+                "Сувлакян Сувлак Лавашович",
+                40_000,
+                LocalDate.of(2022, 2, 2));
         /*
         TODO
-         Задание:
-         Создать 3 поваров.
-         Зп каждого повара зависит от стажа работа и
-         совокупности % от дохода компании и сlientSalary.
-         если повар работает до 1 года,
-         он получает свою зп(сlientSalary) + 8% от сlientSalary.
-         Если же повар работает от 1 года до 4 лет
-         он получают свою зп + 11% от сlientSalary + 4% от incomeRestaurant
+         не добавится employee3,
+         т.к. employeeSet добавляет только уникальных сотрудников,
+         благодаря equals(Object o) и hashCode()
          */
+        Employee employee3 = new Waiter(
+                "Сувлакян Сувлак Лавашович",
+                40_000,
+                LocalDate.of(2022, 2, 2));
+        System.out.println(Employee.getEmployeeSet());
     }
 }
+
